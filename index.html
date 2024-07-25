@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZURRAHMAN MUHAMMAD ALI - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home">
+        <div class="container home-content">
+            <div class="intro">
+                <h1>Welcome to My Personal Web</h1>
+                <h2>ZURRAHMAN MUHAMMAD ALI</h2>
+                <p><i>Web Developer</i></p>
+                <p>I am currently pursuing my studies at UNIVERSITY MUHAMMADIYAH RIAU majoring in Informatics Engineering. I am interested in web development and game development.</p>
+                <div class="buttons">
+                    <a href="CV MSIB.pdf" class="btn">Download CV</a>
+                    <a href="#portfolio" class="btn">My Portfolio</a>
+                </div>
+                <div class="social">
+                    <a href="https://wa.me/message/NY4OXOZTE3ZCM1"><img src="wa1.png" alt="WhatsApp"></a>
+                    <a href="https://www.instagram.com/zur4036?igsh=NHV5eDFicDloN3Ax"><img src="ig.png" alt="Instagram"></a>
+                    <a href="https://youtube.com/@mannn9752?si=YVY_mnRXtvIC_Ofc"><img src="yt.png" alt="YouTube"></a>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="picture.jpg" alt="ZURRAHMAN MUHAMMAD ALI">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Zurrahman Muhammad Ali, a 4th-semester student in the Informatics Engineering Study Program at the University Muhammadiyah Riau. I have an interest in programming, especially Web Development and Game Development. I am currently learning web programming languages such as HTML, CSS, and JavaScript.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-list">
+                <div class="portfolio-item">
+                    <img src="portofolio.png" alt="Project 1" class="zoomable">
+                    <h3>Project 1</h3>
+                </div>
+                <div class="portfolio-item">
+                    <img src="portofolio1.png" alt="Project 2" class="zoomable">
+                    <h3>Project 2</h3>
+                </div>
+                <div class="portfolio-item">
+                    <img src="portofolio3.png" alt="Project 3" class="zoomable">
+                    <h3>Project 3</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form action="submit-form.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ZURRAHMAN MUHAMMAD ALI. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Zoomed Image -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script>
+        // JavaScript for zoom effect on portfolio images
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const close = document.getElementsByClassName('close')[0];
+
+        document.querySelectorAll('.zoomable').forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = img.src;
+            });
+        });
+
+        close.onclick = function() { 
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
