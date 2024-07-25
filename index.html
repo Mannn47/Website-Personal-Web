@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZURRAHMAN MUHAMMAD ALI - Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,10 +12,10 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+                    <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,7 +44,6 @@
         </div>
     </section>
 
-    <!-- About Me Section -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -51,28 +51,26 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio">
         <div class="container">
             <h2>Portfolio</h2>
             <div class="portfolio-list">
                 <div class="portfolio-item">
-                    <img src="portofolio.PNG" alt="Project 1" class="zoomable">
+                    <img src="portofolio.png" alt="Project 1" class="zoomable">
                     <h3>Project 1</h3>
                 </div>
                 <div class="portfolio-item">
-                    <img src="portofolio1.PNG" alt="Project 2" class="zoomable">
+                    <img src="portofolio1.png" alt="Project 2" class="zoomable">
                     <h3>Project 2</h3>
                 </div>
                 <div class="portfolio-item">
-                    <img src="portofolio3.PNG" alt="Project 3" class="zoomable">
+                    <img src="portofolio3.png" alt="Project 3" class="zoomable">
                     <h3>Project 3</h3>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2>Contact</h2>
@@ -98,14 +96,12 @@
         <p>&copy; 2024 ZURRAHMAN MUHAMMAD ALI. All rights reserved.</p>
     </footer>
 
-    <!-- Modal for Zoomed Image -->
     <div id="modal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modal-img">
     </div>
 
     <script>
-        // JavaScript for zoom effect on portfolio images
         const modal = document.getElementById('modal');
         const modalImg = document.getElementById('modal-img');
         const close = document.getElementsByClassName('close')[0];
